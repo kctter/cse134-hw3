@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hobby</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+</head>
+<body>
+<!-- navbar -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./project.html">Project</a></li>
+        <li><a href="./hobby.html">Hobby</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<h1>Hobby</h1>
+<hr>
+<p>Over the years, I have some hobby and would like to share here. </p>
+
+<section>
+    <h2>Picture</h2>
+    <figure>
+        <picture>
+            <source media="(min-width: 640px)" srcset="Black_Cat_low_res.jpg">
+            <source media="(min-width: 1080px)" srcset="Black_Cat.jpg">
+            <img src="./Black_Cat.jpg" alt="Black Cat">
+        </picture>
+        <figcaption>Black Cat</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <picture>
+            <source media="(min-width: 640px)" srcset="Orange_Cat_low_res.jpg">
+            <source media="(min-width: 1080px)" srcset="Orange_Cat.jpg">
+            <img src="./Orange_Cat.jpg" alt="Orange Cat">
+        </picture>
+        <figcaption>Orange Cat</figcaption>
+    </figure>
+    <br>
+</section>
+
+<section>
+    <h2>Video</h2>
+    <video controls>
+        <source src="./Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.<br>
+    </video>
+    <br>
+</section>
+
+<section>
+    <h2>Audio</h2>
+    <audio controls>
+        <source src="./Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="audio/mp3">
+        Sorry, your browser doesn't support embedded audio.<br>
+    </audio>
+    <br>
+</section>
+
+<section>
+    <h2>Graphics</h2>
+    <svg width="256" height="256">
+        <circle cx="128" cy="128" r="100" fill="yellow"/>
+        <circle cx="96" cy="100" r="10" fill="black"/>
+        <circle cx="160" cy="100" r="10" fill="black"/>
+        <path d="M70 150 Q135,240 190 150"/>
+    </svg>
+    <br>
+
+
+</section>
+
+<canvas id="canvas" width="256" height="256">
+    Your browser does not support the canvas tag.
+</canvas>
+
+<script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    ctx.font = "30px Comic Sans MS";
+    ctx.textAlign = "center";
+    ctx.strokeText("Henry Chan", canvas.width / 2, canvas.height / 2);
+
+    ctx.beginPath();
+    ctx.rect(20, 20, 150, 100);
+    ctx.stroke()
+
+    ctx.beginPath();
+    ctx.rect(80, 80, 150, 100);
+    ctx.stroke()
+</script>
+
+<footer>
+    <p>&copy; 2022 Henry Chan</p>
+</footer>
+
+</body>
+</html>

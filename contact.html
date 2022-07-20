@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+<!-- navbar -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./project.html">Project</a></li>
+        <li><a href="./hobby.html">Hobby</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Contact</h1>
+    <hr>
+    <template>
+        <h2>You can fill in the form below</h2>
+
+        <form action="/form-handler" method="POST">
+            <fieldset>
+                <legend>Your Information</legend>
+
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName"><br>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName"><br>
+
+                <label for="suffix">Suffix:</label>
+                <input list="suffix-list" name="suffix" id="suffix">
+                <datalist id="suffix-list">
+                    <option value="Sr.">
+                    <option value="Jr.">
+                </datalist>
+                <br>
+
+                <label for="country">Country:</label>
+                <select name="country" id="country">
+                    <optgroup label="North American">
+                        <option>United States of America</option>
+                        <option>Canada</option>
+                        <option>Mexico</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                        <option>United Kingdom</option>
+                        <option>France</option>
+                        <option>German</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option>Others</option>
+                    </optgroup>
+                </select><br>
+
+
+                <label for="email">Email address:</label>
+                <input type="email" name="email" id="email"><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" name="phone" id="phone"><br>
+
+                <label for="subject">Subject:</label>
+                <textarea name="subject" id="subject"></textarea><br>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+    </template>
+
+    <h2>You can come and visit me at UCSD</h2>
+    <iframe width="640" height="480"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-117.25647926330568%2C32.85619355721603%2C-117.22738265991212%2C32.901461285951115&amp;layer=mapnik&amp;marker=32.87883031139498%2C-117.24193096160889"></iframe>
+    <br/><small><a href="https://www.openstreetmap.org/?mlat=32.8788&amp;mlon=-117.2419#map=15/32.8788/-117.2419">View
+    Larger Map</a></small>
+</main>
+
+
+<footer>
+    <p>&copy; 2022 Henry Chan</p>
+</footer>
+
+</body>
+</html>
