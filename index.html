@@ -5,18 +5,172 @@
     <title>Henry's persona page</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
-        table, th, td {
-            border-style: solid;
+        * {
+            margin: 0;
+            padding: 0;
         }
+
+        .top-nav {
+            list-style-type: none;
+            overflow: hidden;
+            background: lightgrey;
+        }
+
+        .top-nav > li {
+            float: left;
+        }
+
+        .top-nav > li a {
+            display: block;
+            color: black;
+            padding: 1em;
+            text-align: center;
+            text-decoration: none;
+            transition: all ease-in-out .1s;
+        }
+
+        .top-nav > li a:hover {
+            background-color: darkgrey;
+        }
+
+        .top-nav > li a.active {
+            background-color: darkgrey;
+        }
+
+        .top-nav > li a.active:hover {
+            background-color: grey;
+        }
+
+        /*@media (min-width: 10000px) {*/
+        /*    body {*/
+        /*        display: grid;*/
+        /*        grid-template-rows: auto 1fr auto;*/
+        /*        grid-template-columns: 350px 1fr;*/
+        /*        min-height: 100vh;*/
+
+        /*    }*/
+
+        /*    header {*/
+        /*        grid-column: 1 / 3;*/
+        /*    }*/
+
+        /*    .top-nav:before {*/
+        /*        background: lightgrey;*/
+        /*        position: absolute;*/
+        /*        bottom: 0;*/
+        /*    }*/
+
+        /*    aside {*/
+        /*        grid-row: 2 / 4;*/
+        /*        padding-top: 0.5em;*/
+
+
+        /*    }*/
+
+        /*    main {*/
+        /*        grid-row: 2 / 3;*/
+
+        /*    }*/
+
+        /*    footer {*/
+        /*        grid-column: 1 / 3;*/
+
+        /*    }*/
+        /*}*/
+
+        body {
+            display: grid;
+            grid-template-rows: auto auto auto auto;
+            grid-template-columns: 350px 1fr;
+            min-height: 100vh;
+
+        }
+
+        aside {
+
+        }
+
+        header {
+            grid-column: 1 / 3;
+        }
+
+
+        .profile-picture {
+
+            grid-column:1/2;
+            border: 5px solid yellow;
+            /*display: block;*/
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            /*border-radius: 100%;*/
+            /*width: 250px;*/
+            /*height: 250px;*/
+            /*box-shadow: 0 5px 10px 0 rgba(35, 60, 80, .25);*/
+        }
+
+        .name {
+            grid-column: 2 / 3;
+            border: 5px solid yellow;
+        }
+
+
+
+        aside {
+            display: contents;
+        }
+
+        main {
+            grid-column: 1 / 3;
+        }
+
+        footer {
+            grid-column: 1 / 3;
+        }
+
+        .
+        /*aside > p {*/
+        /*    text-align: center;*/
+        /*    padding-top: 0.5em;*/
+        /*    padding-bottom: 0.5em;*/
+        /*}*/
+        /*aside > table {*/
+        /*    margin-left: auto;*/
+        /*    margin-right: auto;*/
+        /*    text-align: left;*/
+        /*    padding-top: 0.5em;*/
+        /*    padding-bottom: 0.5em;*/
+        /*}*/
+
+        /*main > article {*/
+        /*    padding-bottom: 2em;*/
+        /*}*/
+
+        /*.main-title {*/
+        /*    padding-top: 0.5em;*/
+        /*    padding-bottom: 0.5em;*/
+        /*}*/
+        /*.article-title {*/
+        /*    padding-bottom: 0.25em;*/
+        /*}*/
+        /*.article-subject {*/
+        /*    padding-top: 0.25em;*/
+        /*}*/
+
+
+
+
+
     </style>
+
 </head>
+
 <body>
 
 <header>
     <!-- navbar -->
     <nav>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
+        <ul class="top-nav">
+            <li><a class="active" href="./index.html">Home</a></li>
             <li><a href="./project.html">Project</a></li>
             <li><a href="./hobby.html">Hobby</a></li>
             <li><a href="./contact.html">Contact</a></li>
@@ -25,144 +179,150 @@
 </header>
 
 <!-- left side -->
-<aside>
-    <img src="myself.jpg" alt="Picture of myself">
-    <div class="name">
-        <h2><b>Henry Chan</b></h2>
-        <p>Student</p>
-    </div>
 
-    <p><strong>"Everybody <em>should</em> learn to program a computer, because it teaches you how to think."</strong> -
-        <i>Steve Jobs</i>,
-        former CEO and creator of Apple</p>
-    <table>
-        <tr>
-            <th>Age</th>
-            <td>21</td>
-        </tr>
-        <tr>
-            <th>Location</th>
-            <td>La Jolla, CA</td>
-        </tr>
-    </table>
-</aside>
+    <aside>
 
-<!-- main content-->
-<main>
-    <h1>Welcome to Henry Chan homepage!</h1>
+        <img class="profile-picture" src="myself.jpg" alt="Picture of myself">
+        <div class="name">
+            <h2><b>Henry Chan</b></h2>
+            <p>Student</p>
 
-    <article>
-        <h2>About</h2>
-        <hr>
-        <p>I am a student in <span style="color:red">University of California, San Diego, CA</span>. Ever since I was a
-            child, I loved to make stuff on
-            my own and show them to my parents, friends and classmates. I am now pursuing a Bachelor’s degree in
-            Mathematics - Computer Science with a minor of Data Science. I am interested in computer science and
-            currently leaning about web dev. </p>
-    </article>
+            <p><strong>"Everybody <em>should</em> learn to program a computer, because it teaches you how to
+                think."</strong> -
+                <i>Steve Jobs</i>,
+                former CEO and creator of Apple</p>
+            <table>
+                <tr>
+                    <th>Age</th>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <th>Location</th>
+                    <td>La Jolla, CA</td>
+                </tr>
+            </table>
+        </div>
+
+    </aside>
+
+    <!-- main content-->
+    <main>
+        <h1 class="main-title">Welcome to Henry Chan homepage!</h1>
+
+        <article>
+            <h2 class="article-subject">About</h2>
+            <hr>
+            <p class="article-start">I am a student in <span style="color:red">University of California, San Diego, CA</span>. Ever since I
+                was a
+                child, I loved to make stuff on
+                my own and show them to my parents, friends and classmates. I am now pursuing a Bachelor’s degree in
+                Mathematics - Computer Science with a minor of Data Science. I am interested in computer science and
+                currently leaning about web dev. </p>
+        </article>
 
 
-    <article>
-        <h2>Education</h2>
-        <hr>
-        <ul>
-            <li>B.S. in Computer Science, UCSD, 2022
+        <article>
+            <h2 class="article-title">Education</h2>
+            <hr>
+            <ul class="article-subject">
+                <li>B.S. in Computer Science, UCSD, 2022
+                    <ul>
+                        <li>GPA 3.0+</li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h2 class="article-title">Work Experience</h2>
+            <hr>
+            <section class="article-subject">
+                <h3>University of California, San Diego</h3>
+                <h4>2020 - Present</h4>
                 <ul>
-                    <li>GPA 3.0+</li>
+                    <li>Student</li>
                 </ul>
-            </li>
-        </ul>
-    </article>
-
-    <hr>
-
-    <article>
-        <h2>Work Experience</h2>
-        <hr>
-        <section>
-            <h3>University of California, San Diego</h3>
-            <h4>2020 - Present</h4>
-            <ul>
-                <li>Student</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Laney College, Oakland</h3>
-            <h4>2016 - Present</h4>
-            <ul>
-                <li>Student</li>
-            </ul>
-        </section>
-    </article>
+            </section>
+            <section class="article-subject">
+                <h3>Laney College, Oakland</h3>
+                <h4>2016 - Present</h4>
+                <ul>
+                    <li>Student</li>
+                </ul>
+            </section>
+        </article>
 
 
-    <article>
-        <h2>Schedule</h2>
-        <hr>
-        <p>You may find my working schedule here. Fell me to contact me when I am free.</p>
-        <table>
-            <caption>Working schedule as of July</caption>
-            <colgroup>
-                <col span="1" class="time">
-                <col span="5" class="weekday">
-                <col span="2" class="weekend">
-            </colgroup>
-            <tr>
-                <th>&nbsp;</th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-                <th>Saturday</th>
-                <th>Sunday</th>
-            </tr>
-            <tr>
-                <th>Morning</th>
-                <td>Busy</td>
-                <td>Busy</td>
-                <td>Busy</td>
-                <td>Busy</td>
-                <td>Free</td>
-                <td>Free</td>
-                <td>Free</td>
-            </tr>
-            <tr>
-                <th>Noon</th>
-                <td>Free</td>
-                <td>Free</td>
-                <td>Free</td>
-                <td>Free</td>
-                <td>Free</td>
-                <td>Free</td>
-                <td>Free</td>
-            </tr>
-            <tr>
-                <th>Night</th>
-                <td>Free</td>
-                <td>Free</td>
-                <td>Free</td>
-                <td>Free</td>
-                <td>Free</td>
-                <td>Free</td>
-                <td>Free</td>
-            </tr>
-        </table>
-    </article>
-    <article>
-        <h2>Value</h2>
-        <hr>
-        <p>As a computer science student, I have a few values want to share.</p>
-        <ol>
-            <li>Be Happy!</li>
-            <li>Start early Start often!</li>
-            <li>Enjoy!</li>
-        </ol>
-    </article>
-</main>
+        <article>
+            <h2 class="article-title">Schedule</h2>
+            <hr>
+            <p class="article-subject">You may find my working schedule here. Fell me to contact me when I am free.</p>
+            <table >
+                <caption>Working schedule as of July</caption>
+                <colgroup>
+                    <col span="1" class="time">
+                    <col span="5" class="weekday">
+                    <col span="2" class="weekend">
+                </colgroup>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+                <tr>
+                    <th>Morning</th>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Busy</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <th>Noon</th>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <th>Night</th>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                </tr>
+            </table>
+        </article>
+        <article>
+            <h2 class="article-title">Value</h2>
+            <hr>
+            <p class="article-subject">As a computer science student, I have a few values want to share.</p>
+            <ol>
+                <li>Be Happy!</li>
+                <li>Start early Start often!</li>
+                <li>Enjoy!</li>
+            </ol>
+        </article>
+    </main>
+
 
 <footer>
+    <hr>
     <p>&copy; 2022 Henry Chan</p>
 </footer>
+
 </body>
 </html>
