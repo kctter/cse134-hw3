@@ -1,3 +1,8 @@
+:root {
+    --width: 1090px;
+    --fath-out: all ease-in-out .2s;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +10,9 @@
 
 @font-face {
     font-family: "Noto-Sans";
-    src: url("NotoSans-Regular.ttf");
+    src: url("../NotoSans-Regular.ttf") format("ttf");
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -14,7 +21,7 @@ body {
     grid-template-columns: 350px 730px;
     align-items: start;
     min-height: 100vh;
-    max-width: 1080px;
+    max-width: var(--width);
     margin: 0 auto;
 }
 
@@ -47,7 +54,7 @@ header {
 
 .top-nav > li a:hover {
     background-color: darkgrey;
-    transition: all ease-in-out .2s;
+    transition: var(--fath-out);
 }
 
 .top-nav > li a.active {
@@ -67,14 +74,20 @@ aside {
     top: 5rem;
 }
 
-
 #profile-picture {
     margin-left: auto;
     margin-right: auto;
     border-radius: 100%;
     width: 200px;
     height: 200px;
+    transform: rotate(360deg);
+    transition: transform 0.5s;
     box-shadow: 0 5px 10px 0 rgba(35, 60, 80, .25);
+}
+
+#profile-picture:active {
+    transform: rotate(0deg);
+    transition: 0s;
 }
 
 .about > #name, .about > #role {
@@ -109,12 +122,32 @@ main > article {
     padding-bottom: 2em;
 }
 
-hr {
-    border: solid 1px grey;
+.sub-heading {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
-img, video, audio, canvas {
+hr {
+    height: 2px;
+    background-color: grey;
+}
+
+img, video, canvas {
     height: 100%;
+    width: 100%;
+    animation: 0.5s ease-out 0s 1 fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+audio {
     width: 100%;
 }
 

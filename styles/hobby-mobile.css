@@ -5,7 +5,9 @@
 
 @font-face {
     font-family: "Noto-Sans";
-    src: url("NotoSans-Regular.ttf");
+    src: url("../NotoSans-Regular.ttf") format("ttf");
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -53,7 +55,6 @@ header {
     background-color: grey;
 }
 
-
 aside {
     display: contents;
 }
@@ -96,11 +97,16 @@ main > article {
 }
 
 hr {
-    border: solid 1px grey;
+    height: 2px;
+    background-color: grey;
 }
 
-img, video, audio, canvas {
+img, video, canvas {
     height: 100%;
+    width: 100%;
+}
+
+audio {
     width: 100%;
 }
 

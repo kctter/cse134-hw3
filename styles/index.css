@@ -1,3 +1,8 @@
+:root {
+    --width: 1090px;
+    --fath-out: all ease-in-out .2s;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +10,9 @@
 
 @font-face {
     font-family: "Noto-Sans";
-    src: url("NotoSans-Regular.ttf");
+    src: url("../NotoSans-Regular.ttf") format("ttf");
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -14,7 +21,7 @@ body {
     grid-template-columns: 350px 730px;
     align-items: start;
     min-height: 100vh;
-    max-width: 1080px;
+    max-width: var(--width);
     margin: 0 auto;
 }
 
@@ -40,7 +47,6 @@ header {
 .top-nav > li a {
     display: block;
     color: black;
-
     padding: 1em;
     text-align: center;
     text-decoration: none;
@@ -48,7 +54,7 @@ header {
 
 .top-nav > li a:hover {
     background-color: darkgrey;
-    transition: all ease-in-out .2s;
+    transition: var(--fath-out);
 }
 
 .top-nav > li a.active {
@@ -68,7 +74,6 @@ aside {
     top: 5rem;
 }
 
-
 #profile-picture {
     margin-left: auto;
     margin-right: auto;
@@ -78,11 +83,21 @@ aside {
     transform: rotate(360deg);
     transition: transform 0.5s;
     box-shadow: 0 5px 10px 0 rgba(35, 60, 80, .25);
+    animation: 0.5s ease-out 0s 1 fadeIn;
 }
 
 #profile-picture:active {
     transform: rotate(0deg);
     transition: 0s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .about > #name, .about > #role {
@@ -96,7 +111,6 @@ aside {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
-
 
 main {
     margin-left: auto;
@@ -143,7 +157,8 @@ main > article {
 }
 
 hr {
-    border: solid 1px grey;
+    height: 2px;
+    background-color: grey;
 }
 
 th, td {
@@ -167,7 +182,6 @@ caption {
     border: solid 1px black;
     border-bottom: none
 }
-
 
 footer {
     grid-column: 1 / 3;
