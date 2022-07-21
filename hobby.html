@@ -4,19 +4,44 @@
     <meta charset="UTF-8">
     <title>Hobby</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen and (min-width: 1080px)" href="hobby.css">
+    <link rel="stylesheet" media="screen and (max-width: 1079px)" href="hobby-mobile.css">
 
 </head>
 <body>
-<!-- navbar -->
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="./project.html">Project</a></li>
-        <li><a href="./hobby.html">Hobby</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-    </ul>
-</nav>
 
+<header>
+    <!-- navbar -->
+    <nav>
+        <ul class="top-nav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./project.html">Project</a></li>
+            <li><a class="active" href="./hobby.html">Hobby</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<aside>
+    <img id="profile-picture" src="myself.jpg" alt="Picture of myself">
+    <div class="about">
+        <h2 id="name"><b>Henry Chan</b></h2>
+        <p id="role">Student</p>
+        <table id="information">
+            <tr>
+                <th>Age</th>
+                <td>21</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>La Jolla, CA</td>
+            </tr>
+        </table>
+    </div>
+</aside>
+
+<main>
 <h1>Hobby</h1>
 <hr>
 <p>Over the years, I have some hobby and would like to share here. </p>
@@ -25,7 +50,8 @@
     <h2>Picture</h2>
     <figure>
         <picture>
-            <source media="(min-width: 640px)" srcset="Black_Cat_low_res.jpg">
+            <!-- src https://www.istockphoto.com/photo/domestic-black-cat-looking-in-front-of-camera-and-lying-on-the-bed-portrait-of-black-gm1175550351-327402259 -->
+            <source media="(max-width: 1079px)" srcset="Black_Cat_low_res.jpg">
             <source media="(min-width: 1080px)" srcset="Black_Cat.jpg">
             <img src="./Black_Cat.jpg" alt="Black Cat">
         </picture>
@@ -34,7 +60,8 @@
     <br>
     <figure>
         <picture>
-            <source media="(min-width: 640px)" srcset="Orange_Cat_low_res.jpg">
+            <!-- https://pixabay.com/photos/cat-pet-feline-cute-orange-animal-360808/ -->
+            <source media="(max-width: 1079px)" srcset="Orange_Cat_low_res.jpg">
             <source media="(min-width: 1080px)" srcset="Orange_Cat.jpg">
             <img src="./Orange_Cat.jpg" alt="Orange Cat">
         </picture>
@@ -70,8 +97,6 @@
         <path d="M70 150 Q135,240 190 150"/>
     </svg>
     <br>
-
-
 </section>
 
 <canvas id="canvas" width="256" height="256">
@@ -93,6 +118,7 @@
     ctx.rect(80, 80, 150, 100);
     ctx.stroke()
 </script>
+</main>
 
 <footer>
     <p>&copy; 2022 Henry Chan</p>
